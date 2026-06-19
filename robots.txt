@@ -1,0 +1,16 @@
+# robots.txt for C Line Cars - Rusthall Airport Taxis
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.vercel/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Crawl-delay: 1
+
+Sitemap: https://rusthall-airport-taxis.vercel.app/sitemap.xml

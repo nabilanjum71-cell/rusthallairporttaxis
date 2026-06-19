@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="C Line Cars - Professional 24/7 airport taxi service from Rusthall to Gatwick, Heathrow, Stansted & Luton. Licensed drivers, fixed prices, flight tracking. Book online or WhatsApp.">
+    <meta name="keywords" content="rusthall airport taxis, airport taxi rusthall, rusthall to gatwick, rusthall airport transfers, fixed price taxi, 24/7 service">
+    <title>C Line Cars - Rusthall Airport Taxis | Fixed Prices | 24/7 Professional Service</title>
+    <meta property="og:title" content="C Line Cars - Rusthall Airport Taxis">
+    <meta property="og:description" content="Book professional airport taxis from Rusthall. Licensed drivers, fixed prices, 24/7 available.">
+    <meta property="og:type" content="website">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --accent-light: #ff6b7a;
+            --text: #ffffff;
+            --text-light: #aaa;
+        }
+        :root.light-mode {
+            --primary: #ffffff;
+            --secondary: #f5f5f5;
+            --text: #000000;
+            --text-light: #666;
+        }
+        html, body { width: 100%; overflow-x: hidden; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.8;
+            transition: all 0.3s ease;
+            padding-top: 60px;
+            padding-bottom: 80px;
+        }
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 26, 46, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--accent);
+            padding: 0 20px;
+            z-index: 1000;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+        .nav-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-brand {
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            background: none;
+            border: none;
+            cursor: pointer;
+            gap: 6px;
+            padding: 10px;
+        }
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .hamburger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(10px, 10px); }
+        .hamburger-menu.active span:nth-child(2) { opacity: 0; }
+        .hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(8px, -8px); }
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-link {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--accent); }
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+        }
+        .theme-toggle:hover {
+            background: var(--accent);
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .hamburger-menu { display: flex; }
+            .nav-menu {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: rgba(26, 26, 46, 0.98);
+                flex-direction: column;
+                gap: 0;
+                padding: 20px 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s;
+            }
+            .nav-menu.active { max-height: 400px; }
+            .nav-link {
+                display: block;
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(233, 69, 96, 0.1);
+                width: 100%;
+            }
+        }
+        /* STICKY CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            padding: 10px 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 999;
+            box-shadow: 0 -2px 15px rgba(0,0,0,0.3);
+        }
+        .cta-btn {
+            flex: 1;
+            padding: 12px 15px;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-call {
+            background: #1a1a2e;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        .cta-call:hover {
+            background: var(--accent);
+            color: white;
+        }
+        .cta-book {
+            background: #1a1a2e;
+            color: white;
+            border: 2px solid white;
+        }
+        /* SECTIONS */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        h2 {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin: 25px 0 15px 0;
+        }
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        .section-with-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .section-with-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .section-with-image.reverse {
+            grid-template-columns: 1fr 1fr;
+        }
+        .section-with-image.reverse .content {
+            order: 2;
+        }
+        .section-with-image.reverse img {
+            order: 1;
+        }
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, rgba(233,69,96,0.1), rgba(233,69,96,0.05));
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero-intro {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        /* ROUTES GRID */
+        .routes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .route-card {
+            background: var(--secondary);
+            padding: 25px;
+            border-radius: 8px;
+            border: 2px solid rgba(233,69,96,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .route-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233,69,96,0.2);
+        }
+        .route-card h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .route-info {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+        .price {
+            font-size: 24px;
+            color: var(--accent);
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        /* TRUST SIGNALS */
+        .signals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .signal {
+            background: var(--secondary);
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 3px solid var(--accent);
+            text-align: center;
+        }
+        .signal .icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+        .signal h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.9rem;
+        }
+        .signal p {
+            color: var(--text-light);
+            font-size: 12px;
+            margin: 0;
+        }
+        /* TESTIMONIALS */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        .testimonial {
+            background: var(--secondary);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+        .stars {
+            color: var(--accent);
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .testimonial p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        .author {
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 15px;
+            font-size: 13px;
+        }
+        /* BOOKING FORM */
+        .booking {
+            background: linear-gradient(135deg, rgba(233,69,96,0.1), rgba(233,69,96,0.05));
+        }
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        .booking-form {
+            background: var(--secondary);
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid rgba(233,69,96,0.2);
+        }
+        .form-section {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(233,69,96,0.1);
+        }
+        .form-section:last-of-type { border-bottom: none; }
+        .form-section h4 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+        .form-group { margin-bottom: 15px; }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-light);
+            font-size: 13px;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: var(--primary);
+            border: 1px solid #333;
+            color: var(--text);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(233,69,96,0.1);
+            outline: none;
+        }
+        textarea { resize: vertical; min-height: 80px; }
+        .price-display {
+            background: rgba(233,69,96,0.1);
+            border: 2px solid var(--accent);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            text-align: center;
+            display: none;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 10px;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(233,69,96,0.3);
+        }
+        .booking-sidebar {
+            background: var(--secondary);
+            padding: 30px;
+            border-radius: 8px;
+            border: 2px solid rgba(233,69,96,0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: fit-content;
+        }
+        .booking-sidebar h3 {
+            color: var(--accent);
+            margin: 0;
+            text-align: center;
+        }
+        .btn-whatsapp {
+            width: 100%;
+            padding: 15px 20px;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-whatsapp:hover { background: #20ba5a; }
+        .info-box {
+            background: rgba(233,69,96,0.05);
+            padding: 15px;
+            border-left: 3px solid var(--accent);
+            border-radius: 4px;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+        /* FOOTER */
+        .footer {
+            background: #0f0f1e;
+            color: var(--text);
+            padding: 60px 20px 20px;
+            margin-top: 80px;
+            border-top: 2px solid var(--accent);
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-section h4 {
+            margin-bottom: 15px;
+            color: var(--accent);
+            font-size: 0.95rem;
+        }
+        .footer-section p {
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #aaa;
+        }
+        .footer-section p a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(233,69,96,0.2);
+            color: #666;
+            font-size: 12px;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .section-with-image { grid-template-columns: 1fr; gap: 25px; }
+            .section-with-image.reverse { grid-template-columns: 1fr; }
+            .booking-grid { grid-template-columns: 1fr; gap: 25px; }
+            .form-row { grid-template-columns: 1fr; }
+            .booking-sidebar { order: -1; }
+            .sticky-cta { flex-direction: column; padding: 8px; gap: 6px; }
+            .cta-btn { padding: 10px 12px; font-size: 12px; }
+            body { padding-bottom: 120px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-brand">C Line Cars</a>
+        <button class="hamburger-menu" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="PAGE-2-RUSTHALL-TO-GATWICK.html" class="nav-link">Gatwick £85</a>
+            <a href="PAGE-3-HEATHROW.html" class="nav-link">Heathrow £126</a>
+            <a href="PAGE-4-STANSTED.html" class="nav-link">Stansted £196</a>
+            <a href="PAGE-5-LUTON.html" class="nav-link">Luton £211</a>
+            <a href="PAGE-8-ABOUT-US.html" class="nav-link">About</a>
+            <a href="PAGE-9-FAQ.html" class="nav-link">FAQ</a>
+            <a href="PAGE-10-CONTACT.html" class="nav-link">Contact</a>
+            <a href="PAGE-11-REVIEWS.html" class="nav-link">Reviews</a>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </div>
+</nav>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+    <a href="tel:07808065494" class="cta-btn cta-call">📞 07808065494</a>
+    <a href="#booking" class="cta-btn cta-book">📅 BOOK NOW</a>
+</div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Professional Airport Taxis from Rusthall | C Line Cars</h1>
+    <p class="hero-intro">Experience reliable, affordable 24/7 airport transfer service from Rusthall to Gatwick, Heathrow, Stansted and Luton. With over 14 years of experience, C Line Cars provides licensed drivers, flight tracking, and fixed-price guaranteed transfers. Book your airport taxi online or via WhatsApp - no hidden charges, just honest, professional service.</p>
+    <img src="images/rusthall-hero.jpeg" alt="Professional C Line Cars airport taxi service from Rusthall" style="max-width: 100%; height: auto; border-radius: 8px; margin-top: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+</section>
+
+<!-- OVERVIEW SECTION WITH IMAGE -->
+<section>
+    <div class="section-with-image">
+        <div class="content">
+            <h2>Your Trusted Airport Taxi Service in Rusthall</h2>
+            <p>Looking for a reliable airport taxi service from Rusthall? C Line Cars has been providing professional transportation solutions to residents and visitors for over 14 years. We understand that airport transfers are important - whether you're heading on a relaxing holiday, attending business meetings, or welcoming family and friends, you need a taxi service you can trust.</p>
+            
+            <p>Our commitment to excellence means every journey is handled with care and professionalism. Unlike standard taxi services that rely on meter-based pricing, C Line Cars offers completely transparent, fixed-price airport transfers. This means no surprises at the end of your journey - you know exactly how much your transfer will cost before you book.</p>
+            
+            <p>We pride ourselves on our fleet of modern, air-conditioned vehicles and our team of experienced, professionally-trained drivers. All our drivers are fully licensed, CRB checked, and rigorously vetted by local authorities. Your safety and comfort are our top priorities. We operate 24/7, meaning we're here for you whenever you need us - early morning flights, late-night arrivals, or any time in between.</p>
+            
+            <p>At C Line Cars, we don't just transport you from A to B - we ensure your airport journey is comfortable, stress-free, and professional. Whether you're a frequent traveler or taking a special trip, our airport taxi service in Rusthall delivers the reliability and quality you deserve.</p>
+        </div>
+        <img src="images/rusthall-hero.jpeg" alt="Professional airport taxi service from Rusthall - C Line Cars luxury vehicle">
+    </div>
+</section>
+
+<!-- ROUTES SECTION -->
+<section id="routes">
+    <h2>Popular Routes from Rusthall to UK Airports</h2>
+    <p>C Line Cars provides fixed-price airport transfers from Rusthall to all major UK airports. Our transparent pricing means you'll never be surprised by hidden charges. Here are our most popular routes:</p>
+    
+    <div class="routes-grid">
+        <div class="route-card">
+            <h3>Rusthall to Gatwick Airport</h3>
+            <p class="route-info">Distance: 28 miles</p>
+            <p class="route-info">Journey time: 45-60 minutes (off-peak)</p>
+            <div class="price">£85</div>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Fixed price | Includes flight tracking | Available 24/7</p>
+        </div>
+
+        <div class="route-card">
+            <h3>Rusthall to Heathrow Airport</h3>
+            <p class="route-info">Distance: 42 miles</p>
+            <p class="route-info">Journey time: 50-70 minutes (off-peak)</p>
+            <div class="price">£126</div>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Fixed price | Includes flight tracking | Available 24/7</p>
+        </div>
+
+        <div class="route-card">
+            <h3>Rusthall to Stansted Airport</h3>
+            <p class="route-info">Distance: 65 miles</p>
+            <p class="route-info">Journey time: 70-90 minutes (off-peak)</p>
+            <div class="price">£196</div>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Fixed price | Includes flight tracking | Available 24/7</p>
+        </div>
+
+        <div class="route-card">
+            <h3>Rusthall to Luton Airport</h3>
+            <p class="route-info">Distance: 70 miles</p>
+            <p class="route-info">Journey time: 75-95 minutes (off-peak)</p>
+            <div class="price">£211</div>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Fixed price | Includes flight tracking | Available 24/7</p>
+        </div>
+    </div>
+
+    <h3>Why These Airports?</h3>
+    <p>Gatwick and Heathrow are London's busiest airports, serving millions of passengers annually. Stansted and Luton provide excellent alternatives for London and East Anglian travelers. No matter which airport you're flying from or to, C Line Cars provides reliable, professional service. Our drivers know the best routes to each airport, accounting for traffic patterns and road conditions to get you there on time, every time.</p>
+
+    <h3>Understanding Our Fixed Pricing</h3>
+    <p>Traditional taxi meters can be frustrating - especially for airport journeys where traffic and delays are unpredictable. Our fixed-price model eliminates this stress. We calculate prices based on distance and current fuel costs, ensuring fairness for both you and our drivers. This transparency is one reason thousands of customers choose C Line Cars for their airport transfers.</p>
+</section>
+
+<!-- DETAILED JOURNEY SECTION WITH IMAGE -->
+<section>
+    <div class="section-with-image reverse">
+        <img src="images/estate-car.jpeg" alt="Spacious estate car for airport transfers from Rusthall - luggage space">
+        <div class="content">
+            <h2>What to Expect from Your Airport Transfer</h2>
+            <p>When you book with C Line Cars, we take care of every detail of your airport journey. Here's what you can expect from our service:</p>
+            
+            <h3>Pre-Journey Communication</h3>
+            <p>Once your booking is confirmed, you'll receive all the details you need. We'll send you driver information, vehicle details, and our real-time tracking capability. If your flight is delayed, you can contact us and we'll adjust your pickup time. Our flight tracking system means we automatically monitor your flight status, so you don't have to worry about missing pickups due to delays or early arrivals.</p>
+            
+            <h3>On-Time Arrival</h3>
+            <p>Punctuality is a cornerstone of our service. Our drivers allow extra time for traffic congestion, road works, and seasonal variations. We pick you up with sufficient time to get you to your airport with a comfortable margin. This means no rushing, no stress - just a relaxed journey to your departure gate.</p>
+            
+            <h3>Professional Drivers</h3>
+            <p>All C Line Cars drivers are fully licensed, CRB checked, and professionally trained. They're courteous, knowledgeable, and focused on your comfort. Many have been with us for years, meaning you benefit from their experience and local knowledge of Rusthall and the surrounding areas.</p>
+            
+            <h3>Comfortable Journey</h3>
+            <p>Our modern vehicles are air-conditioned, equipped with satellite navigation, and maintained to the highest standards. Whether you're traveling solo or with a group, we have vehicles to suit your needs - from comfortable saloons to spacious estate cars and minibuses. All vehicles have ample luggage space for holiday suitcases or business equipment.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES & FEATURES SECTION WITH IMAGE -->
+<section>
+    <div class="section-with-image">
+        <div class="content">
+            <h2>Premium Services for Every Journey</h2>
+            <p>Beyond standard airport transfers, C Line Cars offers a range of premium services tailored to your specific needs:</p>
+            
+            <h3>Meet & Greet Service</h3>
+            <p>Arriving at an airport can be disorienting, especially if you're tired after a long flight. Our Meet & Greet service is perfect for these situations. Your driver will be waiting in the arrivals area with a name board, so you can easily spot them. They'll help with your luggage and guide you to the vehicle, taking the stress out of airport arrivals. This service is available at all major airports and costs just £5 extra.</p>
+            
+            <h3>Executive Chauffeur Service</h3>
+            <p>For business travelers who need to make a professional impression or simply prefer a more premium experience, our Executive Chauffeur service is ideal. This includes a smartly-dressed driver, refreshments, and a vehicle from our premium fleet. Perfect for business meetings, corporate events, or when you simply want to arrive in style. Add just £10 to your transfer price.</p>
+            
+            <h3>Flight Tracking & Automatic Updates</h3>
+            <p>We monitor your flight in real-time using live airline data. If your flight is delayed, we automatically adjust your pickup time. This means you never have to worry about a driver waiting around or arriving too early. It's just one of the ways we use modern technology to improve your experience.</p>
+            
+            <h3>Additional Amenities</h3>
+            <p>Traveling with children? We provide car seats at no extra cost - just let us know when booking. Extra luggage going on holiday? We charge just £20 per item for additional baggage space. If your flight departs or arrives between 10 PM and 6 AM, a small night surcharge of £20 applies to cover unsociable hours, but availability is guaranteed.</p>
+        </div>
+        <img src="images/executive-saloon.jpeg" alt="Executive luxury saloon car for premium airport transfers from Rusthall">
+    </div>
+</section>
+
+<!-- WHY CHOOSE US SECTION -->
+<section id="why-choose">
+    <h2>Why Choose C Line Cars for Your Rusthall Airport Transfer?</h2>
+    <p>With several taxi options available in Rusthall, you might wonder what makes C Line Cars the right choice. Here are the key reasons why thousands of customers trust us:</p>
+    
+    <div class="signals-grid">
+        <div class="signal">
+            <div class="icon">🛡️</div>
+            <h3>CRB Checked</h3>
+            <p>All drivers fully vetted and enhanced DBS checked for your safety</p>
+        </div>
+        <div class="signal">
+            <div class="icon">📋</div>
+            <h3>Licensed Operators</h3>
+            <p>Licensed since 2012 with 14+ years proven experience</p>
+        </div>
+        <div class="signal">
+            <div class="icon">💼</div>
+            <h3>Fully Insured</h3>
+            <p>£10 million public liability insurance coverage</p>
+        </div>
+        <div class="signal">
+            <div class="icon">💷</div>
+            <h3>Fixed Fares</h3>
+            <p>Transparent pricing with no hidden charges or surprises</p>
+        </div>
+        <div class="signal">
+            <div class="icon">⏰</div>
+            <h3>24/7 Available</h3>
+            <p>Operating every day, including weekends and holidays</p>
+        </div>
+        <div class="signal">
+            <div class="icon">⭐</div>
+            <h3>Highly Rated</h3>
+            <p>4.8+ star rating from 1000+ satisfied customers (95% satisfaction)</p>
+        </div>
+        <div class="signal">
+            <div class="icon">✈️</div>
+            <h3>Flight Tracking</h3>
+            <p>Real-time flight monitoring with automatic schedule adjustments</p>
+        </div>
+        <div class="signal">
+            <div class="icon">✓</div>
+            <h3>Professional Service</h3>
+            <p>Reliable, punctual, courteous drivers trained to high standards</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION WITH IMAGE -->
+<section>
+    <div class="section-with-image reverse">
+        <img src="images/driver-1.jpeg" alt="Professional C Line Cars driver - customer testimonials for airport taxi service">
+        <div class="content">
+            <h2>What Our Customers Say</h2>
+            <p>Don't just take our word for it - here's what customers say about their experiences with C Line Cars:</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"Absolutely professional service! The driver arrived on time, was courteous, and the journey was smooth. The fixed price made everything transparent - no surprises. Highly recommended for airport transfers."</p>
+                    <p class="author">Sarah M. | Holiday Trip | March 2024</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"Used C Line Cars multiple times for business trips. Reliable, clean vehicles, excellent communication, and reasonable prices. The drivers clearly know the best routes to avoid traffic. Will definitely use again."</p>
+                    <p class="author">John T. | Business Travel | February 2024</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"Great experience for our family holiday! The driver was incredibly helpful with our luggage and made our kids feel comfortable. Very professional and punctual. Worth every penny."</p>
+                    <p class="author">Emma L. | Family Holiday | January 2024</p>
+                </div>
+
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>"Finally, a taxi company that doesn't use hidden charges! C Line Cars quotes a fair fixed price and delivers exactly what they promise. More people need to know about them."</p>
+                    <p class="author">Michael J. | Solo Business Traveler | December 2023</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;">With a 95% customer satisfaction rating based on over 1000 reviews, you can feel confident booking with C Line Cars for your airport transfer.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section>
+    <h2>Frequently Asked Questions About Our Rusthall Airport Taxi Service</h2>
+    <p>We get a lot of questions about booking, pricing, and our service. Here are answers to the most common ones:</p>
+    
+    <h3>How do I book an airport taxi with C Line Cars?</h3>
+    <p>Booking is easy! You have three options: (1) Fill out our online booking form on this website and we'll confirm within 2 hours, (2) Call us directly on 07808065494, or (3) Send us a WhatsApp message to the same number for quick response. We're available 24/7 so you can book at your convenience.</p>
+    
+    <h3>Are your prices really fixed with no hidden charges?</h3>
+    <p>Yes, absolutely. When we quote you a price, that's the price you'll pay. There are no meter charges, no surprise fuel surcharges, no congestion fees - just the agreed fixed price. The only additions are optional services like Meet & Greet (£5), Executive service (£10), or additional luggage (£20 per item). Everything is clearly explained at booking.</p>
+    
+    <h3>What if my flight is delayed?</h3>
+    <p>That's exactly why we offer flight tracking. We monitor your flight in real-time, and if it's delayed, we automatically adjust your pickup time. You can also contact us directly with any changes. We understand that flights don't always run on schedule, and we build this into our service.</p>
+    
+    <h3>What payment methods do you accept?</h3>
+    <p>We accept all major payment methods including cash, credit cards, debit cards, and digital payments. You can pay at booking or in the vehicle - whatever suits you best.</p>
+    
+    <h3>Do you operate outside standard airport hours?</h3>
+    <p>Yes! We operate 24/7, including early mornings and late nights. A small surcharge of £20 applies for journeys between 10 PM and 6 AM to cover unsociable hours, but we're always available when you need us.</p>
+    
+    <h3>Can I bring luggage and baggage?</h3>
+    <p>Of course! All our vehicles are designed to handle airport luggage. Standard suitcases and holiday baggage are included in your price. If you need extra space for additional items, we charge £20 per extra bag. We can usually accommodate most requirements - just let us know when booking.</p>
+    
+    <h3>Is your fleet suitable for families?</h3>
+    <p>Absolutely. We have vehicles to suit all needs - comfortable saloons for couples and individuals, spacious estate cars for families with luggage, and minibuses for larger groups. Car seats for children are available at no extra cost - just request when booking.</p>
+    
+    <h3>How far in advance should I book?</h3>
+    <p>While we recommend booking 24-48 hours in advance, we can often accommodate last-minute bookings. Call or WhatsApp us with your details and we'll do our best to arrange a driver. In emergencies, we're here to help.</p>
+    
+    <h3>Are your drivers experienced with airport routes?</h3>
+    <p>Yes, all our drivers have extensive experience with airport routes. They know the best routes to each major airport, understand traffic patterns, and can advise you on timings. Many have been with us for years, giving you the benefit of their experience.</p>
+    
+    <h3>What makes C Line Cars different from other taxi services?</h3>
+    <p>Several things: our transparent fixed pricing means no hidden charges, our flight tracking removes uncertainty, our drivers are all fully licensed and professionally trained, we've been serving customers for 14 years, and we maintain consistently high standards. But most importantly - we genuinely care about your experience.</p>
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="booking" id="booking">
+    <h2>Book Your Rusthall Airport Transfer Now</h2>
+    <p>Ready to experience professional airport taxi service? Book with C Line Cars today. Fill out the form below or contact us directly via WhatsApp or phone.</p>
+    
+    <div class="booking-grid">
+        <form id="bookingForm" onsubmit="handleSubmit(event)">
+            <div class="form-section">
+                <h4>Your Details</h4>
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" value="07808065494" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4>Journey Details</h4>
+                <div class="form-group">
+                    <label>Pickup Location *</label>
+                    <input type="text" placeholder="Your address in Rusthall" required>
+                </div>
+                <div class="form-group">
+                    <label>Destination Airport *</label>
+                    <input type="text" placeholder="E.g., Gatwick, Heathrow, Stansted, Luton" id="destination" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Pickup Date *</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pickup Time *</label>
+                        <input type="time" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h4>Service Details</h4>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Number of Passengers *</label>
+                        <input type="number" min="1" max="8" value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Service Type *</label>
+                        <select required>
+                            <option>Standard Taxi</option>
+                            <option>Executive Chauffeur (+£10)</option>
+                            <option>Meet & Greet (+£5)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Special Requests (Optional)</label>
+                    <textarea placeholder="E.g., Car seat needed, extra luggage, accessibility requirements..."></textarea>
+                </div>
+            </div>
+
+            <div class="price-display" id="priceDisplay">
+                <h4>Estimated Price</h4>
+                <div style="color: var(--accent); font-size: 28px; font-weight: bold;">£85 - £211</div>
+            </div>
+
+            <div class="form-section">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms" style="margin: 0;">I agree to Terms & Conditions and Privacy Policy *</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Confirm Airport Transfer Booking</button>
+            <p style="text-align: center; color: #888; font-size: 12px;">✓ We'll confirm your booking within 2 hours</p>
+        </form>
+
+        <div class="booking-sidebar">
+            <h3>Quick Booking Options</h3>
+            
+            <button class="btn-whatsapp" onclick="openWhatsApp()">💬 Book via WhatsApp</button>
+            
+            <a href="tel:07808065494" style="display: block; padding: 15px; background: linear-gradient(135deg, #e94560, #ff6b7a); color: white; border: none; border-radius: 4px; text-align: center; text-decoration: none; font-weight: 600; cursor: pointer;">📞 Call Now</a>
+            
+            <div class="info-box">
+                <strong>Available 24/7</strong><br><br>
+                Response time: Usually within 30 minutes<br><br>
+                Fixed prices, no hidden charges<br><br>
+                Professional, licensed drivers
+            </div>
+
+            <div class="info-box">
+                ✓ CRB Checked Drivers<br><br>
+                ✓ Fully Insured (£10M)<br><br>
+                ✓ Flight Tracking Included<br><br>
+                ✓ Real-Time Updates
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>C Line Cars - Rusthall</h4>
+            <p>Professional 24/7 airport taxi transfers from Rusthall, Tunbridge Wells</p>
+            <p>📞 <a href="tel:07808065494">07808 065494</a></p>
+            <p>📧 <a href="mailto:clinetaxi@gmail.com">clinetaxi@gmail.com</a></p>
+            <p>⏰ Available 24/7 including weekends & holidays</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Popular Routes</h4>
+            <p><a href="PAGE-2-RUSTHALL-TO-GATWICK.html">→ Gatwick Airport (£85)</a></p>
+            <p><a href="PAGE-3-HEATHROW.html">→ Heathrow Airport (£126)</a></p>
+            <p><a href="PAGE-4-STANSTED.html">→ Stansted Airport (£196)</a></p>
+            <p><a href="PAGE-5-LUTON.html">→ Luton Airport (£211)</a></p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Service Areas</h4>
+            <p>Rusthall<br>Tunbridge Wells<br>Langton Green<br>Crowborough<br>Southborough</p>
+        </div>
+
+        <div class="footer-section">
+            <h4>Company</h4>
+            <p>Licensed since 2012<br>14+ years experience<br>50+ professional drivers<br>18+ modern vehicles</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 C Line Cars. All rights reserved.</p>
+        <p>✓ Licensed Private Hire Operator | ✓ CRB Checked Drivers | ✓ Fully Insured £10M</p>
+    </div>
+</footer>
+
+<script>
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.classList.toggle('light-mode', savedTheme === 'light');
+    
+    themeToggle.addEventListener('click', () => {
+        const isLight = html.classList.toggle('light-mode');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburgerBtn');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Form submission
+    function handleSubmit(event) {
+        event.preventDefault();
+        alert('Booking submitted! We will confirm within 2 hours.');
+        event.target.reset();
+    }
+
+    // WhatsApp
+    function openWhatsApp() {
+        const message = encodeURIComponent('Hi, I\'d like to book an airport taxi from Rusthall to an airport. Could you provide more details?');
+        window.open(`https://wa.me/447808065494?text=${message}`);
+    }
+
+    // Close menu on click outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+</script>
+
+<!-- GOOGLE ANALYTICS PLACEHOLDER -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- SCHEMA MARKUP -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "C Line Cars - Rusthall Airport Taxis",
+  "description": "Professional 24/7 airport taxi service in Rusthall with fixed prices and flight tracking",
+  "telephone": "07808065494",
+  "email": "clinetaxi@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rusthall",
+    "addressRegion": "Kent",
+    "postalCode": "TN4",
+    "addressCountry": "GB"
+  },
+  "priceRange": "£85-£211",
+  "ratingValue": "4.8",
+  "reviewCount": "1000",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }
+}
+</script>
+
+</body>
+</html>
+EOF
