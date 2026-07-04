@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    { "source": "/PAGE-2-RUSTHALL-TO-GATWICK.html", "destination": "/gatwick.html", "permanent": true },
+    { "source": "/PAGE-3-HEATHROW.html", "destination": "/heathrow.html", "permanent": true },
+    { "source": "/PAGE-4-STANSTED.html", "destination": "/stansted.html", "permanent": true },
+    { "source": "/PAGE-5-LUTON.html", "destination": "/luton.html", "permanent": true },
+    { "source": "/PAGE-8-ABOUT-US.html", "destination": "/#about", "permanent": true },
+    { "source": "/PAGE-9-FAQ.html", "destination": "/#faq", "permanent": true },
+    { "source": "/PAGE-10-CONTACT.html", "destination": "/#booking", "permanent": true },
+    { "source": "/PAGE-11-REVIEWS.html", "destination": "/#reviews", "permanent": true }
+  ]
+}

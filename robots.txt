@@ -1,16 +1,13 @@
-# robots.txt for C Line Cars - Rusthall Airport Taxis
+# Robots.txt for rusthallairporttaxis.co.uk
+# Rusthall Airport Taxis (C Line Cars)
 
 User-agent: *
 Allow: /
+
+# Disallow any admin or internal paths (add yours here)
 Disallow: /admin/
-Disallow: /.vercel/
+Disallow: /private/
+Disallow: /tmp/
 
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-Crawl-delay: 1
-
-Sitemap: https://rusthall-airport-taxis.vercel.app/sitemap.xml
+# Sitemap location — submit this URL to Google Search Console
+Sitemap: https://www.rusthallairporttaxis.co.uk/sitemap.xml
