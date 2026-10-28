@@ -1,0 +1,22 @@
+# Rusthall Airport Taxis — Rusthall (TN4) Airport Taxi Transfers
+
+> Fixed-fare taxi transfers from Rusthall, Tunbridge Wells borough (TN4) to Gatwick, Heathrow, Stansted, Luton and London City airports.
+> Updated: October 2026
+
+## Core Pages
+- [Home](/): Overview of Rusthall airport taxi service, fixed fares, and booking
+- [Gatwick Taxi](/gatwick.html): Rusthall to Gatwick Airport, fixed £85, North and South Terminals
+- [Heathrow Taxi](/heathrow.html): Rusthall to Heathrow Airport, fixed £126, Terminals 2, 3, 4 and 5
+- [Stansted Taxi](/stansted.html): Rusthall to Stansted Airport, fixed £196, direct service
+- [Luton Taxi](/luton.html): Rusthall to Luton Airport, fixed £211, direct service
+- [London City Taxi](/london-city.html): Rusthall to London City Airport, fixed £146, direct service
+
+## Fares and extras
+- Gatwick £85, Heathrow £126, Stansted £196, Luton £211, London City £146 — fixed at booking, no meter, no surge pricing.
+- Extras: night surcharge +£20 (10pm-6am), Meet & Greet at arrivals +£5, executive service +£10, extra luggage beyond standard £20 per item, child seats free on request.
+
+## Booking
+- Phone: 07808 065494 (24/7)
+- WhatsApp: 07808 065494
+- Email: clinetaxi@gmail.com
+- Booking form on the home page
