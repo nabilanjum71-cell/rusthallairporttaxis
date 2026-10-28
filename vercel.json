@@ -7,6 +7,9 @@
     { "source": "/PAGE-8-ABOUT-US.html", "destination": "/#about", "permanent": true },
     { "source": "/PAGE-9-FAQ.html", "destination": "/#faq", "permanent": true },
     { "source": "/PAGE-10-CONTACT.html", "destination": "/#booking", "permanent": true },
-    { "source": "/PAGE-11-REVIEWS.html", "destination": "/#reviews", "permanent": true }
+    { "source": "/PAGE-11-REVIEWS.html", "destination": "/", "permanent": true },
+    { "source": "/tunbridge-wells.html", "destination": "/", "permanent": true },
+    { "source": "/tunbridge-wells-to-gatwick-taxi.html", "destination": "/gatwick.html", "permanent": true },
+    { "source": "/tunbridge-wells-to-heathrow-taxi.html", "destination": "/heathrow.html", "permanent": true }
   ]
 }
