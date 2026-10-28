@@ -10,6 +10,7 @@
 - [Stansted Taxi](/stansted.html): Rusthall to Stansted Airport, fixed £196, direct service
 - [Luton Taxi](/luton.html): Rusthall to Luton Airport, fixed £211, direct service
 - [London City Taxi](/london-city.html): Rusthall to London City Airport, fixed £146, direct service
+- [Minibus & Group Transfers](/minibus.html): Minibus and group airport transfers from Rusthall to all five airports — for a quote, please call 07808 065494
 
 ## Fares and extras
 - Gatwick £85, Heathrow £126, Stansted £196, Luton £211, London City £146 — fixed at booking, no meter, no surge pricing.
