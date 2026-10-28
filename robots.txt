@@ -1,5 +1,5 @@
 # Robots.txt for rusthallairporttaxis.co.uk
-# Rusthall Airport Taxis (C Line Cars)
+# Rusthall Airport Taxis
 
 User-agent: *
 Allow: /
