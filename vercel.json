@@ -1,5 +1,8 @@
 {
   "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "rusthall-airport-taxis.vercel.app" }], "destination": "https://www.rusthallairporttaxis.co.uk/:path*", "permanent": true },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "rusthallairporttaxis.co.uk" }], "destination": "https://www.rusthallairporttaxis.co.uk/:path*", "permanent": true },
+    { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/PAGE-2-RUSTHALL-TO-GATWICK.html", "destination": "/gatwick.html", "permanent": true },
     { "source": "/PAGE-3-HEATHROW.html", "destination": "/heathrow.html", "permanent": true },
     { "source": "/PAGE-4-STANSTED.html", "destination": "/stansted.html", "permanent": true },
@@ -7,9 +10,15 @@
     { "source": "/PAGE-8-ABOUT-US.html", "destination": "/#about", "permanent": true },
     { "source": "/PAGE-9-FAQ.html", "destination": "/#faq", "permanent": true },
     { "source": "/PAGE-10-CONTACT.html", "destination": "/#booking", "permanent": true },
-    { "source": "/PAGE-11-REVIEWS.html", "destination": "/", "permanent": true },
-    { "source": "/tunbridge-wells.html", "destination": "/", "permanent": true },
-    { "source": "/tunbridge-wells-to-gatwick-taxi.html", "destination": "/gatwick.html", "permanent": true },
-    { "source": "/tunbridge-wells-to-heathrow-taxi.html", "destination": "/heathrow.html", "permanent": true }
+    { "source": "/PAGE-11-REVIEWS.html", "destination": "/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
   ]
 }

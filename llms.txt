@@ -1,23 +1,28 @@
-# Rusthall Airport Taxis — Rusthall (TN4) Airport Taxi Transfers
+# Rusthall Airport Taxis — Airport Taxis from Rusthall and Royal Tunbridge Wells
 
-> Fixed-fare taxi transfers from Rusthall, Tunbridge Wells borough (TN4) to Gatwick, Heathrow, Stansted, Luton and London City airports.
-> Updated: October 2026
+> Fixed-fare airport taxi transfers from Rusthall (TN4) and Royal Tunbridge Wells (TN1, TN2, TN4), Kent, to Gatwick, Heathrow, London City, Stansted and Luton airports. Based in Rusthall, about 2 miles west of Tunbridge Wells town centre. 24/7.
+> Updated: November 2026
 
-## Core Pages
-- [Home](/): Overview of Rusthall airport taxi service, fixed fares, and booking
-- [Gatwick Taxi](/gatwick.html): Rusthall to Gatwick Airport, fixed £85, North and South Terminals
-- [Heathrow Taxi](/heathrow.html): Rusthall to Heathrow Airport, fixed £126, Terminals 2, 3, 4 and 5
-- [Stansted Taxi](/stansted.html): Rusthall to Stansted Airport, fixed £196, direct service
-- [Luton Taxi](/luton.html): Rusthall to Luton Airport, fixed £211, direct service
-- [London City Taxi](/london-city.html): Rusthall to London City Airport, fixed £146, direct service
-- [Minibus & Group Transfers](/minibus.html): Minibus and group airport transfers from Rusthall to all five airports — for a quote, please call 07808 065494
+## Tunbridge Wells pages
+- [Airport Taxi Tunbridge Wells](https://www.rusthallairporttaxis.co.uk/tunbridge-wells.html): all fixed fares from Tunbridge Wells, areas covered (TN1, TN2, TN4)
+- [Tunbridge Wells to Gatwick Taxi](https://www.rusthallairporttaxis.co.uk/tunbridge-wells-to-gatwick-taxi.html): fixed £85, North and South Terminals, 45–55 minutes
+- [Tunbridge Wells to Heathrow Taxi](https://www.rusthallairporttaxis.co.uk/tunbridge-wells-to-heathrow-taxi.html): fixed £126, Terminals 2–5, 65–100 minutes
 
-## Fares and extras
-- Gatwick £85, Heathrow £126, Stansted £196, Luton £211, London City £146 — fixed at booking, no meter, no surge pricing.
-- Extras: night surcharge +£20 (10pm-6am), Meet & Greet at arrivals +£5, executive service +£10, extra luggage beyond standard £20 per item, child seats free on request.
+## Rusthall pages
+- [Home](https://www.rusthallairporttaxis.co.uk/): overview, fares, FAQ and booking form
+- [Rusthall to Gatwick](https://www.rusthallairporttaxis.co.uk/gatwick.html): fixed £85
+- [Rusthall to Heathrow](https://www.rusthallairporttaxis.co.uk/heathrow.html): fixed £126
+- [Rusthall to London City](https://www.rusthallairporttaxis.co.uk/london-city.html): fixed £146
+- [Rusthall to Stansted](https://www.rusthallairporttaxis.co.uk/stansted.html): fixed £196
+- [Rusthall to Luton](https://www.rusthallairporttaxis.co.uk/luton.html): fixed £211
+- [Minibus & Group Transfers](https://www.rusthallairporttaxis.co.uk/minibus.html): quote by phone on 07808 065494
+
+## Fares (same from Rusthall and Tunbridge Wells)
+- Gatwick £85, Heathrow £126, London City £146, Stansted £196, Luton £211 — fixed at booking, no meter, no surge pricing.
+- Extras: night surcharge +£20 (10pm–6am), Meet & Greet at arrivals +£5, executive vehicle +£10, extra luggage beyond standard £20 per item, child seats free on request.
+- Flight tracking included; up to 45 minutes free waiting on delayed arrivals.
 
 ## Booking
-- Phone: 07808 065494 (24/7)
-- WhatsApp: 07808 065494
+- Phone / WhatsApp: 07808 065494 (24/7)
 - Email: clinetaxi@gmail.com
 - Booking form on the home page
